@@ -3,14 +3,19 @@
 ::after{
     margin: 0;
     padding: 0;
+    --border: 5px;
+    --light-blue: #00c6fb;
+    --dark-blue: #005bea;
+    --block-width: 964px;
 }
 .header-top{
+    width: var(--block-width);
     height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 318px;
+    margin: 0 auto;
 }
 .menu-list{
     display: flex;
@@ -27,26 +32,38 @@
     font-size: 16px;
     line-height: 28px;
 }
-.header-top__button a{
+.header-top__button{
     width: 226px;
     height: 40px;
     border-radius: 20px;
-    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 27px;
+    background: linear-gradient(#fff, #fff) padding-box, 
+    linear-gradient(to right, var(--light-blue), var(--dark-blue)) border-box;
+    border:  1px solid transparent;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.online-loans{
+.header-top__button a{
+    text-decoration: none;
+    background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    background-clip: text;
+    color: transparent;
+    margin-left: 11px;
+}
+.online-loans{   
     background-image: url("images/main-bg.png");
+    background-size: cover;
     background-repeat: no-repeat;
     height: 450px;
     max-width: 100%;
-    padding-left: 318px;
+    display: flex;
+    justify-content: center;
+}
+.online-loans-centered{
+    width: var(--block-width);
 }
 .online-loans__container{
     display: flex;
@@ -70,7 +87,9 @@
     line-height: 145px;
     margin: 70px 0 0 26px;
     background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
-    background-clip: content-box;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
 }
 .online-loans-two__title{
     font-family: Russo One;
@@ -103,9 +122,12 @@
     position: relative;
 }
 .online-loans__block{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
     position: absolute;
     top: 105px;
-    width: 964px;
+    width: var(--block-width);
     height: 119px;
     background: #FFFFFF;
     box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
@@ -160,6 +182,29 @@
     top: -8px;
     left: 100px;
 }
+.online-loans__order{
+    display: flex;
+    flex-direction: column;
+    margin-left: 74px;
+}
+.online-loans__order__button button{
+    width: 262px;
+    height: 50px;
+    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-top: 22px;
+}
+.online-loans__order__text{
+    margin-top: 11px;
+}
 .online-loans__block__number__container{
     display: flex;
     flex-direction: row;
@@ -179,7 +224,7 @@
     background-image: url("images/service-bg.png");
     background-repeat: no-repeat;
     height: 791px;
-    max-width: 100%;
+    background-size: cover;
     padding-left: 318px;
 }
 .service__title{
@@ -199,10 +244,94 @@
 } 
 .service-block__one,
 .service-block__two,
-.service-block__three{
+.service-block__three,
+.service-block__four{
     width: 308px;
     height: 365px;
     background: #FBFBFB;
     box-shadow: -2.17893px -2.17893px 6.5368px #F3F3F3, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
     border-radius: 25px;
+    position: relative;
+}
+.service-block__number__img{
+    position: absolute;
+    top: -40px;
+    left: 236px;
+}
+.service-block__two__number__img{
+    position: absolute;
+    left: 134px;
+    top: -40px;
+}
+.service-block__three__number__img{
+    position: absolute;
+    left: 136px;
+    top: -40px;
+}
+.service-block__four__number__img{
+    position: absolute;
+    left: 136px;
+    top: -40px;
+}
+.service-block__one__img,
+.service-block__two__img,
+.service-block__three__img,
+.service-block__four__img{
+    padding: 40px 0 0 40px;
+}
+.service-block__one__text,
+.service-block__two__text,
+.service-block__three__text,
+.service-block__four__text{
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    padding: 15px 0 0 40px;
+}
+.service-block__info{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3E3E3E;
+    padding: 10px 0 0 40px;
+}
+.service-arrows{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-top: 40px;
+}
+.service-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: var(--block-width);
+}
+.service-button button{
+    width: 308px;
+    height: 60px;
+    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+.swiper{
+    width: 100%;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
