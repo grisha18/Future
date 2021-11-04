@@ -1,0 +1,208 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+}
+.header-top{
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 318px;
+}
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2em;
+}
+.menu-list a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+}
+.header-top__button a{
+    width: 226px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+}
+.online-loans{
+    background-image: url("images/main-bg.png");
+    background-repeat: no-repeat;
+    height: 450px;
+    max-width: 100%;
+    padding-left: 318px;
+}
+.online-loans__container{
+    display: flex;
+    flex-direction: row;
+}
+.online-loans__title{
+    padding-top: 92px;
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #3E3E3E;
+}
+.online-loans__procent{
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 145px;
+    margin: 70px 0 0 26px;
+    background: linear-gradient(90deg, #00C6FB 0%, #005BEA 100%);
+    background-clip: content-box;
+}
+.online-loans-two__title{
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #3E3E3E;
+    margin-top: -65px;
+    margin-left: 102px;
+}
+.online-loans__text{
+    font-family: Cera Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
+    color: #3E3E3E;
+    margin-top: 20px;
+}
+.online-loans__application__text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #8B8B8B;
+    margin-top: 15px;
+    position: relative;
+}
+.online-loans__block{
+    position: absolute;
+    top: 105px;
+    width: 964px;
+    height: 119px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    border-radius: 25px;
+    padding-left: 23px;
+}
+.online-loans__block__container{
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    margin-top: 22px;
+}
+.online-loans__block__summa{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3E3E3E;
+}
+.online-loans__block__price{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.range-slider{
+    width: 273px;
+    height: 2px;
+    background: #A2A2A2;
+    border-radius: 1px;
+    position: relative;
+    margin-top: 9px;
+}
+.range-slider__line{
+    position: absolute;
+    width: 116px;
+    height: 2px;
+    background: #000000;
+    border-radius: 1px;
+}
+.range-slider__circle{
+    width: 16px;
+    height: 16px;
+    background: #4268FF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    position: absolute;
+    top: -8px;
+    left: 100px;
+}
+.online-loans__block__number__container{
+    display: flex;
+    flex-direction: row;
+    gap: 19.5em;
+    margin-top: 11px;
+}
+.online-loans__block__number__left,
+.online-loans__block__number__right{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #828282;
+} 
+.service{
+    background-image: url("images/service-bg.png");
+    background-repeat: no-repeat;
+    height: 791px;
+    max-width: 100%;
+    padding-left: 318px;
+}
+.service__title{
+    padding-top: 140px;
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 33px;
+    color: #3E3E3E;
+}
+.service-block{
+    display: flex;
+    flex-direction: row;
+    gap: 6em;
+    margin-top: 75px;
+} 
+.service-block__one,
+.service-block__two,
+.service-block__three{
+    width: 308px;
+    height: 365px;
+    background: #FBFBFB;
+    box-shadow: -2.17893px -2.17893px 6.5368px #F3F3F3, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+    border-radius: 25px;
+}
