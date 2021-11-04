@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -22,69 +23,84 @@
             </ul>
         </nav>
         <div class="header-top__button">
+            <img src="images/icon1.png" alt="icon1" />
             <a href="#">Копировать ссылку</a>
         </div>
     </header>
     <section class="online-loans">
-        <div class="online-loans__container">
-            <div class="online-loans__title">
-                Займы онлайн под</br>
+        <div class="online-loans-centered">
+            <div class="online-loans__container">
+                <div class="online-loans__title">
+                    Займы онлайн под</br>
+                </div>
+                <div class="online-loans__procent">
+                    0%
+                </div>
             </div>
-            <div class="online-loans__procent">
-                0%
+            <div class="online-loans-two__title">
+                до 15 000 рублей
             </div>
-        </div>
-        <div class="online-loans-two__title">
-            до 15 000 рублей
-        </div>
-        <div class="online-loans__text">
-            Заполните заявку на займ сейчас</br>
-            и получите решение в 12:26
-        </div>
-        <div class="online-loans__application__text">
-            <p>Внимание!</br>
-                Услуга обработки заявки платная и составляет до 499 руб. раз в 5 дней</p>
-            <div class="online-loans__block">
-                <div class="online-loans__block__container">
-                    <div class="online-loans__block__summa">
-                        Сумма займа
+            <div class="online-loans__text">
+                Заполните заявку на займ сейчас</br>
+                и получите решение в 12:26
+            </div>
+            <div class="online-loans__application__text">
+                <p>Внимание!</br>
+                    Услуга обработки заявки платная и составляет до 499 руб. раз в 5 дней</p>
+                <div class="online-loans__block">
+                    <div class="loan-card">
+                        <div class="online-loans__block__container">
+                            <div class="online-loans__block__summa">
+                                Сумма займа
+                            </div>
+                            <div class="online-loans__block__price">
+                                16 000 Р
+                            </div>
+                        </div>
+                        <div class="range-slider">
+                            <div class="range-slider__line">
+                                <div class="range-slider__circle"></div>
+                            </div>
+                        </div>
+                        <div class="online-loans__block__number__container">
+                            <div class="online-loans__block__number__left">
+                                0
+                            </div>
+                            <div class="online-loans__block__number__right">
+                                100 000
+                            </div>
+                        </div>
                     </div>
-                    <div class="online-loans__block__price">
-                        16 000 Р
+                    <div class="load-card">
+                        <div class="online-loans__block__container">
+                            <div class="online-loans__block__summa">
+                                Сумма займа
+                            </div>
+                            <div class="online-loans__block__price">
+                                16 000 Р
+                            </div>
+                        </div>
+                        <div class="range-slider">
+                            <div class="range-slider__line">
+                                <div class="range-slider__circle"></div>
+                            </div>
+                        </div>
+                        <div class="online-loans__block__number__container">
+                            <div class="online-loans__block__number__left">
+                                0
+                            </div>
+                            <div class="online-loans__block__number__right">
+                                100 000
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="range-slider">
-                    <div class="range-slider__line">
-                        <div class="range-slider__circle"></div>
-                    </div>
-                </div>
-                <div class="online-loans__block__number__container">
-                    <div class="online-loans__block__number__left">
-                        0
-                    </div>
-                    <div class="online-loans__block__number__right">
-                        100 000
-                    </div>
-                </div>
-                <div class="online-loans__block__container">
-                    <div class="online-loans__block__summa">
-                        Сумма займа
-                    </div>
-                    <div class="online-loans__block__price">
-                        16 000 Р
-                    </div>
-                </div>
-                <div class="range-slider">
-                    <div class="range-slider__line">
-                        <div class="range-slider__circle"></div>
-                    </div>
-                </div>
-                <div class="online-loans__block__number__container">
-                    <div class="online-loans__block__number__left">
-                        0
-                    </div>
-                    <div class="online-loans__block__number__right">
-                        100 000
+                    <div class="online-loans__order">
+                        <div class="online-loans__order__button">
+                            <button>Оформить заявку</button>
+                        </div>
+                        <div class="online-loans__order__text">
+                            <p>Обязаюсь вернуть 16 000 рублей до 04.08.21 </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,29 +110,119 @@
         <div class="service__title">
             Как работает сервис?
         </div>
-        <div class="service-block">
-            <div class="service-block__one">
-                <div class="service-block__one__img">
-                   <img src="images/service-icon1.svg" alt="service-icon1"/>  
+        <div class="service-block swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="service-block__one">
+                        <div class="service-block__number__img">
+                            <img src="images/01.png" alt="01" />
+                        </div>
+                        <div class="service-block__one__img">
+                            <img src="images/service-icon1.svg" alt="service-icon1" />
+                        </div>
+                        <div class="service-block__one__text">
+                            Выберите сумму</br>
+                            и срок займа
+                        </div>
+                        <div class="service-block__info">
+                            <p>Оформите заявку на займ вне</br>зависимости от вашего</br>местоположения,
+                                главное</br>иметь интернет, паспорт и</br>банковскую карту </p>
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="service-block__two">
+                        <div class="service-block__two__number__img">
+                            <img src="images/02.png" alt="02" />
+                        </div>
+                        <div class="service-block__two__img">
+                            <img src="images/service-icon2.svg" alt="service-icon2" />
+                        </div>
+                        <div class="service-block__two__text">
+                            Заполните данные</br>
+                            для получения денег!
+                        </div>
+                        <div class="service-block__info">
+                            <p>Расскажите немного о себе —</br>
+                                откуда Вы, какой займ Вам</br>
+                                нужен
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="service-block__three">
+                        <div class="service-block__three__number__img">
+                            <img src="images/03.png" alt="03" />
+                        </div>
+                        <div class="service-block__one__img">
+                            <img src="images/service-icon3.svg" alt="service-icon3" />
+                        </div>
+                        <div class="service-block__three__text">
+                            Дождитесь одобрения</br>
+                            сервиса
+                        </div>
+                        <div class="service-block__info">
+                            <p>
+                                Решение по вашей заявке</br>
+                                будет принято в течение</br>
+                                нескольких секунд – не</br>
+                                закрывайте сайт!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="service-block__four">
+                        <div class="service-block__four__number__img">
+                            <img src="images/04.png" alt="04" />
+                        </div>
+                        <div class="service-block__one__img">
+                            <img src="images/service-icon4.svg" alt="service-icon4" />
+                        </div>
+                        <div class="service-block__four__text">
+                            Получите деньги
+                        </div>
+                        <div class="service-block__info">
+                            <p>
+                                Перечисление на карту или</br>
+                                любым удобным способом
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-            <div class="service-block__two">
-                <div class="service-block__one__img">
-                    <img src="images/service-icon2.svg" alt="service-icon2"/>
-                </div>
+        </div>
+        <div class="service-container">
+            <div class="service-arrows">
+                <img src="images/left-arrow.png" class="left" alt="left-arrow" />
+                <img src="images/right-arrow.png" class="right" alt="right-arrow" />
             </div>
-            <div class="service-block__three">
-                <div class="service-block__one__img">
-                    <img src="images/service-icon3.svg" alt="service-icon3"/>
-                </div>
+            <div class="service-button">
+                <button>Оставить заявку</button>
             </div>
         </div>
     </section>
 
-
+    <!-- https://www.youtube.com/watch?v=ddbxsrGPRY0 -->
 
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper( ".service-block",{
+            slidesPerView: 2,
+            spaceBetween: 30,
+            navigation:{
+                nextEl: ".right",
+                prevEl: ".left"
+            }
+        })
+    </script>
+
 </body>
 
 </html>
