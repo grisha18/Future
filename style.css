@@ -50,6 +50,7 @@
     text-decoration: none;
     background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     margin-left: 11px;
 }
@@ -225,7 +226,11 @@
     background-repeat: no-repeat;
     height: 791px;
     background-size: cover;
-    padding-left: 318px;
+    display: flex;
+    justify-content: center; 
+}
+.service-centered{
+    width: var(--block-width);
 }
 .service__title{
     padding-top: 140px;
@@ -239,7 +244,6 @@
 .service-block{
     display: flex;
     flex-direction: row;
-    gap: 6em;
     margin-top: 75px;
 } 
 .service-block__one,
@@ -303,14 +307,15 @@
 .service-arrows{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 45px; 
     margin-top: 40px;
+    cursor: pointer;
 }
 .service-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: var(--block-width);
+    max-width: 810px;
 }
 .service-button button{
     width: 308px;
