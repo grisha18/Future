@@ -3,7 +3,8 @@ const onlineLoansBlockNumberRight = document.querySelector('.online-loans__block
 const rangeSlider = document.querySelector('.range-slider input');
 
 
-rangeSlider.addEventListener = ("input", ()=>{
+rangeSlider.addEventListener("input", ()=>{
     let value = rangeSlider.value;
     onlineLoansBlockNumberLeft.textContent = value;
+    onlineLoansBlockNumberRight.textContent = value;
 } );

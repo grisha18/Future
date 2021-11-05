@@ -125,7 +125,7 @@
 .online-loans__block{
     display: flex;
     flex-direction: row;
-    gap: 2.5em;
+    gap: 3em;
     position: absolute;
     top: 105px;
     width: var(--block-width);
@@ -190,7 +190,7 @@
 .online-loans__order{
     display: flex;
     flex-direction: column;
-    margin-left: 74px;
+    margin-left: 274px;
 }
 .online-loans__order__button button{
     width: 262px;
@@ -206,14 +206,26 @@
     line-height: 23px;
     color: #FFFFFF;
     margin-top: 22px;
+    margin-left: 70px;
 }
 .online-loans__order__text{
     margin-top: 11px;
+    margin-left: 70px;
 }
 .online-loans__block__number__container{
     display: flex;
     flex-direction: row;
     gap: 19.5em;
+    margin-top: 11px;
+}
+.online-loans__block__time__container{
+    display: flex;
+    gap: 12.5em;
+    margin-top: 22px;
+}
+.online-loans__block__date__container{
+    display: flex;
+    gap: 17.6em;
     margin-top: 11px;
 }
 .online-loans__block__number__left,
@@ -224,7 +236,7 @@
     font-size: 14px;
     line-height: 24px;
     color: #828282;
-} 
+}
 .service{
     background-image: url("images/service-bg.png");
     background-repeat: no-repeat;
