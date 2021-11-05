@@ -157,15 +157,15 @@
     line-height: 24px;
     color: #000000;
 }
-.range-slider{
+.range-slider input{
     width: 273px;
     height: 2px;
     background: #A2A2A2;
     border-radius: 1px;
-    position: relative;
+    /* position: relative; */
     margin-top: 9px;
-}
-.range-slider__line{
+} 
+/* .range-slider__line{
     position: absolute;
     width: 116px;
     height: 2px;
@@ -182,7 +182,11 @@
     position: absolute;
     top: -8px;
     left: 100px;
-}
+} */ */
+
+
+
+
 .online-loans__order{
     display: flex;
     flex-direction: column;
