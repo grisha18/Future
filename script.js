@@ -1,9 +1,9 @@
 const onlineLoansBlockNumberLeft = document.querySelector('.online-loans__block__number__left');
 const onlineLoansBlockNumberRight = document.querySelector('.online-loans__block__number__right');
-const rangeSlider = document.querySelector('.range-slider');
+const rangeSlider = document.querySelector('.range-slider input');
 
 
-rangeSlider.onInput = ( ()=>{
+rangeSlider.addEventListener = ("input", ()=>{
     let value = rangeSlider.value;
     onlineLoansBlockNumberLeft.textContent = value;
-} )
+} );
