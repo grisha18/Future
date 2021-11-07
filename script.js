@@ -6,7 +6,6 @@ const onlineLoansBlockPrice = document.querySelector('.online-loans__block__pric
 const onlineLoansBlockDatePrice = document.querySelector('.online-loans__block__date__price');
 const burger = document.querySelector('.burger');
 const menuList = document.querySelector('.menu-list');
-const headerTopButton = document.querySelector('.header-top__button');
 
 
 
@@ -27,7 +26,6 @@ rangeSliderDate.addEventListener("input", ()=>{
 burger.addEventListener('click', () =>{
 
     menuList.classList.toggle('menu-shown');
-    headerTopButton.classList.toggle('header-top__button');
     burger.classList.toggle('burger-rotated');
 
 })

@@ -39,6 +39,9 @@
     font-size: 16px;
     line-height: 28px;
 }
+.menu-list a:hover{
+    border-bottom: 1px solid #000;
+}
 .header-top__button{
     width: 226px;
     height: 40px;
@@ -60,6 +63,9 @@
     -webkit-background-clip: text;
     color: transparent;
     margin-left: 11px;
+}
+.header-top__button:hover{
+    opacity: 0.4;
 }
 .online-loans{   
     background-image: url("images/main-bg.png");
@@ -180,6 +186,9 @@
     border-radius: 1px;
     margin-top: 9px;
 } 
+input[type=range] {
+    color: red;
+}
 .online-loans__order{
     display: flex;
     flex-direction: column;
@@ -234,10 +243,11 @@
     height: 791px;
     background-size: cover;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    overflow: hidden;
 }
 .service-centered{
-    width: var(--block-width);
+    width: 1128px;
 }
 .service__title{
     padding-top: 140px;
@@ -359,6 +369,7 @@
     background-color: #000000;
     transition: 0.5s;
 }
+   
 @media(max-width: 1020px){
     .online-loans__block{
         width: 315px;
@@ -385,8 +396,11 @@
     }
 }
 @media(max-width: 610px){
+    .online-loans__percent{
+        margin: 10px 0 0 10px;
+        font-size: 35px;
+    }
     .online-loans__title,
-    .online-loans__percent,
     .online-loans-two__title{
         font-size: 23px;
         text-transform: none;
@@ -396,7 +410,6 @@
     }
     .online-loans-two__title{
         margin-left: 0;
-        margin-top: -107px;
     }
     .online-loans{
         margin-left: 30px;
@@ -408,8 +421,7 @@
     }
 }
 @media(max-width: 590px){
-    .menu-list,
-    .header-top__button{
+    .menu-list{
         display: none;
         width: 0px;
         overflow: hidden;
@@ -427,27 +439,28 @@
     }
     .burger-rotated{
         transform: rotate(90deg);
-        transition: transform 0.1s ease-in;
+        transition: transform 0.2s ease-in;
     }
-    .menu-shown,
-    .header-top__button{
-        left: -8em;
-        top: 1em;
+    .menu-shown{
         width: 200px;
-        height: 200px;
+        height: 150px;
         text-align: center;
         margin-top: 250px;
         margin-left: 30px;
-        -webkit-transition: width 0.1s ease-in-out;
-        -moz-transition: width 0.1s ease-in-out;
-        -o-transition: width 0.1s ease-in-out;
-        transition: width 0.1s ease-in-out;
-        background: rebeccapurple;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+        background: #e9e9e9;
         backdrop-filter: blur(8px); 
         border-radius: 5px;
+    }
+    .menu-shown a:hover{
+        border-bottom: 1px solid #000000;
     }
     .menu-shown li{
         white-space: nowrap;
         margin-top: 1em;
+        transition: 0.5s;
     }
 }
