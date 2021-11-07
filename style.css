@@ -8,6 +8,13 @@
     --dark-blue: #005bea;
     --block-width: 964px;
 }
+@font-face{
+    font-family: "Cera Pro";
+    src: url("fonts/CeraPro-Regular.woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
 .header-top{
     width: var(--block-width);
     height: 75px;
@@ -80,7 +87,7 @@
     text-transform: uppercase;
     color: #3E3E3E;
 }
-.online-loans__procent{
+.online-loans__percent{
     font-family: Russo One;
     font-style: normal;
     font-weight: normal;
@@ -157,6 +164,14 @@
     line-height: 24px;
     color: #000000;
 }
+.online-loans__block__date__price{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
 .range-slider input,
 .range-slider__date input{
     width: 273px;
@@ -165,32 +180,10 @@
     border-radius: 1px;
     margin-top: 9px;
 } 
-/* .range-slider__line{
-    position: absolute;
-    width: 116px;
-    height: 2px;
-    background: #000000;
-    border-radius: 1px;
-}
-.range-slider__circle{
-    width: 16px;
-    height: 16px;
-    background: #4268FF;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-    border-radius: 50px;
-    position: absolute;
-    top: -8px;
-    left: 100px;
-} */ */
-
-
-
-
 .online-loans__order{
     display: flex;
     flex-direction: column;
-    margin-left: 274px;
+    margin-left: 70px;
 }
 .online-loans__order__button button{
     width: 262px;
@@ -206,11 +199,9 @@
     line-height: 23px;
     color: #FFFFFF;
     margin-top: 22px;
-    margin-left: 70px;
 }
 .online-loans__order__text{
     margin-top: 11px;
-    margin-left: 70px;
 }
 .online-loans__block__number__container{
     display: flex;
@@ -273,15 +264,17 @@
     border-radius: 25px;
     position: relative;
 }
-.service-block__number__img{
+.service-block__number__img img{
     position: absolute;
-    top: -40px;
-    left: 236px;
-}
+    top: -50px;
+    left: 136px;
+    z-index: 100;
+ }
 .service-block__two__number__img{
     position: absolute;
     left: 134px;
     top: -40px;
+    z-index: 100;
 }
 .service-block__three__number__img{
     position: absolute;
@@ -305,7 +298,7 @@
 .service-block__four__text{
     font-family: Cera Pro;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #000000;
@@ -355,4 +348,106 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.burger{
+    display: none;
+}
+.line{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #000000;
+    transition: 0.5s;
+}
+@media(max-width: 1020px){
+    .online-loans__block{
+        width: 315px;
+        height: 310px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        top: 0;
+    }
+    .online-loans{
+        height: 663px;
+    }
+    .online-loans__order{
+        margin-left: 0;
+    }
+    .online-loans__application__text{
+        padding-top: 325px;
+    }
+}
+@media(max-width: 965px){
+    .header-top{
+        justify-content: flex-start;
+    }
+}
+@media(max-width: 610px){
+    .online-loans__title,
+    .online-loans__percent,
+    .online-loans-two__title{
+        font-size: 23px;
+        text-transform: none;
+    }
+    .online-loans__title{
+        padding-top: 65px;
+    }
+    .online-loans-two__title{
+        margin-left: 0;
+        margin-top: -107px;
+    }
+    .online-loans{
+        margin-left: 30px;
+        height: 623px;
+    }
+    .online-loans__text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media(max-width: 590px){
+    .menu-list,
+    .header-top__button{
+        display: none;
+        width: 0px;
+        overflow: hidden;
+        display: block;
+    }
+    .burger{
+        display: block;
+        position: absolute;
+        left: 38px;
+        top: 28px;
+        cursor: pointer;
+    }
+    .header-top__button{
+        display: none;
+    }
+    .burger-rotated{
+        transform: rotate(90deg);
+        transition: transform 0.1s ease-in;
+    }
+    .menu-shown,
+    .header-top__button{
+        left: -8em;
+        top: 1em;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        margin-top: 250px;
+        margin-left: 30px;
+        -webkit-transition: width 0.1s ease-in-out;
+        -moz-transition: width 0.1s ease-in-out;
+        -o-transition: width 0.1s ease-in-out;
+        transition: width 0.1s ease-in-out;
+        background: rebeccapurple;
+        backdrop-filter: blur(8px); 
+        border-radius: 5px;
+    }
+    .menu-shown li{
+        white-space: nowrap;
+        margin-top: 1em;
+    }
 }
