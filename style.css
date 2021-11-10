@@ -70,7 +70,9 @@
 .online-loans{   
     background-image: url("images/main-bg.png");
     background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: top center;
     height: 450px;
     max-width: 100%;
     display: flex;
@@ -414,14 +416,12 @@ input[type=range]::-webkit-slider-runnable-track {
     background-color: #000000;
     transition: 0.5s;
 }
-@media(max-width: 1290px){
-    .service-centered{
-        width: 900px;
-    }
-}
 @media(max-width: 1075px){
     .service-centered{
         width: 900px;
+    }
+    .service-container{
+        max-width: 766px;
     }
 }
 @media(max-width: 1020px){
@@ -442,10 +442,53 @@ input[type=range]::-webkit-slider-runnable-track {
     .online-loans__application__text{
         padding-top: 325px;
     }
+    .service__title{
+        padding-top: 40px;
+    }
 }
 @media(max-width: 965px){
     .header-top{
         justify-content: flex-start;
+    }
+    .service-centered{
+        width: 500px;
+    }
+    .service-container{
+        max-width: 766px;
+    } 
+    .service-block__one__img,
+    .service-block__two__img,
+    .service-block__three__img,
+    .service-block__four__img{
+        padding: 20px 0 0 20px;
+    }
+    .service-block__one__text,
+    .service-block__two__text,
+    .service-block__three__text,
+    .service-block__four__text{
+        padding: 20px 0 0 20px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .service-block__info{
+        padding: 15px 0 0 20px;
+    }
+}
+@media(max-width: 768px){
+    .service-block__one,
+    .service-block__two,
+    .service-block__three,
+    .service-block__four{
+        width: 210px;
+        height: 319px;
+    }
+}
+@media(max-width: 680px){
+    .service{
+        padding-left: 30px;
+    }
+    .service-arrows{
+        display: none;
     }
 }
 @media(max-width: 610px){
@@ -521,6 +564,11 @@ input[type=range]::-webkit-slider-runnable-track {
     .online-loans{
         background-image: url("images/main-bg__mobile.png");
         background-size: cover;
-        max-width: 100%;
+        background-size: contain;
+    }
+}
+@media(max-width: 515px){
+    .service-centered{
+        width: 330px;
     }
 }

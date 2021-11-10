@@ -205,21 +205,90 @@
         </div>
     </section>
 
-    <!-- https://www.youtube.com/watch?v=ddbxsrGPRY0 -->
-
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+
     <script>
-        var swiper = new Swiper(".service-block", {
-            slidesPerView: 3,
-            spaceBetween: 102,
-            navigation: {
-                nextEl: ".service-right__arrow",
-                prevEl: ".service-left__arrow"
+            
+        function createSwiper(){
+            if (window.innerWidth > 1500) {
+                swiper = new Swiper(".service-block", {
+                    slidesPerView: 3,
+                    spaceBetween: 102,
+                    navigation: {
+                        nextEl: ".service-right__arrow",
+                        prevEl: ".service-left__arrow"
+                    }
+                })
+             } else {
+                 swiper = new Swiper(".service-block", {
+                    slidesPerView: 2,
+                    spaceBetween: 62,
+                    navigation: {
+                        nextEl: ".service-right__arrow",
+                        prevEl: ".service-left__arrow"
+                    }
+                })
             }
+        }
+
+
+        function tabletSwiper(){
+            if (window.innerWidth < 768) {
+                swiper = new Swiper(".service-block", {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: ".service-right__arrow",
+                        prevEl: ".service-left__arrow"
+                    }
+                })
+            }
+        }
+
+
+        function mobileSwiper(){
+            if (window.innerWidth < 500) {
+                swiper = new Swiper(".service-block", {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: ".service-right__arrow",
+                        prevEl: ".service-left__arrow"
+                    }
+                })
+            }
+        }
+
+
+        
+        createSwiper();
+        window.addEventListener("resize", event => {
+
+            console.log(`resize with width ${window.innerWidth}`);
+            createSwiper();
+          
         })
+
+        tabletSwiper();
+        window.addEventListener("resize", event => {
+
+            console.log(`resize with width ${window.innerWidth}`);
+            tabletSwiper();
+          
+        })
+
+        mobileSwiper();
+        window.addEventListener("resize", event => {
+
+            console.log(`resize with width ${window.innerWidth}`);
+            mobileSwiper();
+          
+        })
+
+
     </script>
 
 </body>
