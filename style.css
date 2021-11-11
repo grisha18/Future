@@ -307,7 +307,7 @@ input[type=range]::-webkit-slider-runnable-track {
 .service-block{
     display: flex;
     flex-direction: row;
-    margin-top: 75px;
+    padding-top: 75px;
 } 
 .service-block__one,
 .service-block__two,
